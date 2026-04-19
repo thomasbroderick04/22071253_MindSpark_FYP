@@ -3,14 +3,14 @@
 // audio playback, and movement between the different test pages.
 
 (() => {
-  const Total_Trials = 10;
+  const Total_Trials = 30;
   let Audio_Option = localStorage.getItem("audio_option") || 'Y'; // Retrieves the user's selected audio setting from local storage. It defaults to 'Y' if no value has been stored.
   const Stimulus_MS = 800; // Defines how long the stimulus page stays visible before automatically moving on (if the user does nothing).
   const Stimulus_Half_MS = 600; // Defines when the stimulus visually changes (fades to the background color). Helps with the transition when the same shape is displayed in succession.
   const Feedback_MS = 100; // Defines how long a feedback page stays visible before the buffer period begins.
   const Trial_Wait_Time_MS = 650; // Defines The extra waiting time between trials after feedback.
   const Progress_Px = 295;
-  const Countdown_Seconds = 3;
+  const Countdown_Seconds = 10;
   const Go_NoGo_Ratio = .5; // Defines the ratio used to randomly determine whether a 'Go' or a 'No-Go' stimulus page is displayed.
 
   // I use two different audio tones: a high beep and a low beep. A specific tone is
